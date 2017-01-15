@@ -18,7 +18,6 @@ PS1='[\u@\h \W]\$ '
 #Variables
 export EDITOR="vim"
 export VISUAL="vim"
-export CURRENT_GIT="/home/userpc/MEGA/Other/Projects/Programs/net-g"
 
 #VI KEYBINDINGS!!!
 set -o vi
