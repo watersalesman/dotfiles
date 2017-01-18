@@ -204,7 +204,7 @@ exec --no-startup-id "feh --bg-scale ~/Pictures/ibm.jpg"
 exec --no-startup-id "redshift"
 exec --no-startup-id "compton -GCb"
 exec --no-startup-id "xset s off && xset dpms 0 0 0"
-exec --no-startup-id "xinput set-prop 12 286 1"
+exec --no-startup-id "xinput set-prop 13 304 1"
 exec --no-startup-id "thunderbird"
 exec --no-startup-id "chromium"
 exec --no-startup-id nm-applet
