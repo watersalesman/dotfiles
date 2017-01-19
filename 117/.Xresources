@@ -7,6 +7,12 @@ URxvt*scrollWithBuffer: true
 ! scroll back to the bottom on keypress
 URxvt*scrollTtyKeypress: true
 
+! Transparency
+!URxvt.transparent:   true
+!URxvt.shading:       15
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/1800/e800
+
 ! Font
 !URxvt.font: xft:Terminus:size=15
 !URxvt.font: xft:DejaVuSansMono:size=12
@@ -76,6 +82,3 @@ URxvt.perl-ext-common: default,matcher
 URxvt.matcher.button: 1
 urxvt*scrollBar:		false
 
-! Transparency
-URxvt.transparent:   true
-URxvt.shading:       15

@@ -11,7 +11,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'git://github.com/vim-syntastic/syntastic.git/'
 Plugin 'git://github.com/thinca/vim-quickrun.git/'
-Plugin 'git://github.com/altercation/vim-colors-solarized.git'
 Plugin 'git://github.com/vim-airline/vim-airline'
 Plugin 'git://github.com/vim-airline/vim-airline-themes'
 Plugin 'git://github.com/bronson/vim-trailing-whitespace'
@@ -77,7 +76,7 @@ runtime! archlinux.vim
 "let skip_defaults_vim=1
 :syntax on
 :set mouse=
-colorscheme solarized
+colorscheme elflord
 :set tabstop=4
 :set shiftwidth=4
 set number
