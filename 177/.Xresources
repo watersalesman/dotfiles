@@ -9,7 +9,7 @@ URxvt*scrollTtyKeypress: true
 
 ! Transparency
 urxvt*depth: 32
-urxvt*background: rgba:0000/0000/3200/c200
+urxvt*background: rgba:0000/0000/1950/c200
 !URxvt.transparent:   true
 !URxvt.shading:       25
 
