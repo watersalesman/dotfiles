@@ -11,7 +11,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'git://github.com/vim-syntastic/syntastic.git/'
 Plugin 'git://github.com/thinca/vim-quickrun.git/'
-Plugin 'git://github.com/altercation/vim-colors-solarized.git'
 Plugin 'git://github.com/vim-airline/vim-airline'
 Plugin 'git://github.com/vim-airline/vim-airline-themes'
 Plugin 'git://github.com/bronson/vim-trailing-whitespace'
@@ -77,7 +76,7 @@ runtime! archlinux.vim
 "let skip_defaults_vim=1
 :syntax on
 :set mouse=
-colorscheme solarized
+:colorscheme elflord
 :set tabstop=4
 :set shiftwidth=4
 set number
@@ -138,7 +137,10 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 
 "Latex
-let g:Tex_CompileRule_pdf = 'pdflatex --interaction=nonstopmode $*'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats = 'pdf'
+
+"let g:Tex_CompileRule_pdf = 'pdflatex --shell-escape --interaction=nonstopmode $*'
 
 "   To create the following files
 "let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'

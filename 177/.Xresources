@@ -8,8 +8,10 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
 ! Transparency
-URxvt.transparent:   true
-URxvt.shading:       25
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/3200/c200
+!URxvt.transparent:   true
+!URxvt.shading:       25
 
 ! Font
 URxvt*font: xft:DejaVu Sans Mono for Powerline:size=13
@@ -17,7 +19,8 @@ URxvt*font: xft:DejaVu Sans Mono for Powerline:size=13
 !URxvt.letterSpace: -6
 
 URxvt.secondaryScreen: 1
-URxvt.secondaryScroll: 0
+URxvt.secondaryScroll: 1
+
 URxvt.color12: rgb:5c/5c/ff
 URxvt.perl-ext-common: default,matcher
 #define S_base03        #002b36
