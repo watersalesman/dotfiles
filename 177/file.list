@@ -5,5 +5,5 @@
 /home/userpc/.config/i3status
 /etc/lxdm/lxdm.conf
 /etc/pacman.conf
-/home/userpc/.vimrc
+/home/userpc/.vim/init.vim
 /home/userpc/.Xresources

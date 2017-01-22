@@ -11,14 +11,15 @@ alias grep="grep --color=auto"
 alias s="sudo"
 alias c="cd"
 alias l="ls"
+alias vi="nvim"
+alias vim="nvim"
 
 #Default thingy
 PS1='[\u@\h \W]\$ '
 
 #Variables
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
-#VI KEYBINDINGS!!!
 set -o emacs
 
