@@ -20,5 +20,5 @@ export EDITOR="vim"
 export VISUAL="vim"
 
 #VI KEYBINDINGS!!!
-set -o vi
+set -o emacs
 
