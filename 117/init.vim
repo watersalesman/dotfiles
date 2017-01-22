@@ -9,21 +9,21 @@ call vundle#begin()
 "
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'git://github.com/vim-syntastic/syntastic.git/'
 Plugin 'git://github.com/thinca/vim-quickrun.git/'
 Plugin 'git://github.com/vim-airline/vim-airline'
 Plugin 'git://github.com/vim-airline/vim-airline-themes'
 Plugin 'git://github.com/bronson/vim-trailing-whitespace'
 Plugin 'git://github.com/tpope/vim-surround.git'
-Plugin 'git://github.com/valloric/youcompleteme'
 Plugin 'git://github.com/majutsushi/tagbar.git'
 Plugin 'git://github.com/tpope/vim-fugitive.git'
 Plugin 'git://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'git://github.com/vim-latex/vim-latex.git'
+Plugin 'git://github.com/Shougo/deoplete.nvim.git'
+Plugin 'git://github.com/neomake/neomake.git'
+Plugin 'git://github.com/raimondi/delimitmate.git'
+let g:deoplete#enable_at_startup = 1
 
-
-
-" " The following are examples of different formats supported.
+" The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
 " Plugin 'tpope/vim-fugitive'
@@ -76,7 +76,7 @@ runtime! archlinux.vim
 "let skip_defaults_vim=1
 :syntax on
 :set mouse=
-colorscheme elflord
+:colorscheme elflord
 :set tabstop=4
 :set shiftwidth=4
 set number
@@ -84,10 +84,6 @@ set nowrap
 let g:netrw_liststyle = 3
 
 set pastetoggle=<F10>
-
-"Syntastic
-let g:syntastic_python_checkers = ['pylint','python']
-let g:syntastic_html_checkers = ['validator','w3']
 
 "Airline
 if !exists('g:airline_symbols')
@@ -124,9 +120,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
-"YCM
-let g:ycm_global_ycm_extra_conf = '/home/userpc/.vim/ycm_global_ycm_extra.conf'
-
 "Tagbar
 nmap <F8> :TagbarToggle<CR>
 
@@ -137,7 +130,10 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 
 "Latex
-let g:Tex_CompileRule_pdf = 'pdflatex --interaction=nonstopmode $*'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats = 'pdf'
+
+"let g:Tex_CompileRule_pdf = 'pdflatex --shell-escape --interaction=nonstopmode $*'
 
 "   To create the following files
 "let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
@@ -145,3 +141,6 @@ let g:Tex_CompileRule_pdf = 'pdflatex --interaction=nonstopmode $*'
 "let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
 "let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 
+"Neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_python_enabled_makers = ['pylint','python']

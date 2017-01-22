@@ -11,12 +11,12 @@ URxvt*scrollTtyKeypress: true
 !URxvt.transparent:   true
 !URxvt.shading:       15
 urxvt*depth: 32
-urxvt*background: rgba:0000/0000/1800/e800
+urxvt*background: rgba:0000/0000/1800/d800
 
 ! Font
 !URxvt.font: xft:Terminus:size=15
 !URxvt.font: xft:DejaVuSansMono:size=12
-URxvt.font: xft:DejaVu Sans Mono For Powerline:size=12
+URxvt.font: xft:DejaVu Sans Mono For Powerline:size=11
 !URxvt.letterSpace: -6
 
 URxvt.secondaryScreen: 1
