@@ -20,6 +20,7 @@ Plugin 'git://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'git://github.com/vim-latex/vim-latex.git'
 Plugin 'git://github.com/Shougo/deoplete.nvim.git'
 Plugin 'git://github.com/neomake/neomake.git'
+Plugin 'git://github.com/raimondi/delimitmate.git'
 let g:deoplete#enable_at_startup = 1
 
 " The following are examples of different formats supported.

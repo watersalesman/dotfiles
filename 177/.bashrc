@@ -13,6 +13,7 @@ alias c="cd"
 alias l="ls"
 alias vi="nvim"
 alias vim="nvim"
+alias v="nvim"
 
 #Default thingy
 PS1='[\u@\h \W]\$ '
