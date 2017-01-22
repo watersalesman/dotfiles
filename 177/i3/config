@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 set $lock i3lock -e -i Pictures/lockscreen.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c
 set $lockdpms xset dpms 5 5 5 && i3lock -en -i Pictures/lockscreen.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c && xset dpms 0 0 0
 
@@ -29,7 +29,7 @@ font pango:Terminus 9
 # font, it doesn’t scale on retina/hidpi displays.
 
 #Lock Screen
-bindsym mod4+l exec $lockdpms
+bindsym ctrl+mod1+l exec $lockdpms
 
 #Set shutdown mode
 set $mode_system (l) Lock, (e) Logout, (r) Reboot, (s) Shutdown
