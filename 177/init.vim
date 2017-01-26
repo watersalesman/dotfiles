@@ -34,16 +34,6 @@ runtime! archlinux.vim
 
 " do not load defaults if ~/.vimrc is missing
 "let skip_defaults_vim=1
-:syntax on
-:set mouse=
-:colorscheme elflord
-:set tabstop=4
-:set shiftwidth=4
-set number
-set nowrap
-let g:netrw_liststyle = 3
-
-set pastetoggle=<F10>
 
 "Airline
 if !exists('g:airline_symbols')
@@ -107,3 +97,15 @@ let g:deoplete#enable_at_startup = 1
 "Neomake
 autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_python_enabled_makers = ['pylint','python']
+
+"General config
+:syntax on
+:set mouse=
+:colorscheme elflord
+:set tabstop=4
+:set shiftwidth=4
+set number
+set nowrap
+let g:netrw_liststyle = 3
+set pastetoggle=<F10>
+
