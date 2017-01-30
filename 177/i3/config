@@ -10,8 +10,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $lock i3lock -e -i Pictures/waterfront.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c
-set $lockdpms xset dpms 5 5 5 && i3lock -en -i Pictures/waterfront.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c && xset dpms 0 0 0
+set $lock i3lock -e -i Pictures/pixelforest.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c
+set $lockdpms xset dpms 5 5 5 && i3lock -en -i Pictures/pixelforest.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c && xset dpms 0 0 0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -204,14 +204,14 @@ bar {
 for_window [class="^.*"] border pixel 2
 smart_gaps on
 smart_borders on
-gaps inner 20
+gaps inner 8
 
 #Startup commands
 assign [class="Chromium"] 2
 assign [class="Thunderbird"] 4
 exec --no-startup-id "feh --bg-scale ~/Pictures/snowfield.jpg"
 exec --no-startup-id "xset s off && xset dpms 0 0 0"
-exec --no-startup-id "xinput set-prop 14 298 1"
+exec --no-startup-id "xinput set-prop 14 293 1"
 exec --no-startup-id "compton -GCb"
 exec --no-startup-id "redshift"
 exec --no-startup-id nm-applet
