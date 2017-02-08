@@ -22,8 +22,10 @@ alias v="nvim"
 PS1='[\u@\h \W]\$ '
 
 #Variables
-export EDITOR="nvim"
-export VISUAL="nvim"
+EDITOR="nvim"
+VISUAL="nvim"
+TERM="xterm"
+
 
 set -o emacs
 
