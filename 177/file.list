@@ -6,3 +6,4 @@
 /etc/pacman.conf
 /home/userpc/.vim/init.vim
 /home/userpc/.Xdefaults
+/home/userpc/.tmux.conf

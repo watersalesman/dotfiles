@@ -17,6 +17,7 @@ alias l="ls"
 alias vi="nvim"
 alias vim="nvim"
 alias v="nvim"
+alias urxvt='urxvt -e tmux'
 
 #Default thingy
 PS1='[\u@\h \W]\$ '
@@ -24,8 +25,6 @@ PS1='[\u@\h \W]\$ '
 #Variables
 EDITOR="nvim"
 VISUAL="nvim"
-TERM="xterm"
 
 
 set -o emacs
-
