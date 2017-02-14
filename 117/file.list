@@ -7,3 +7,4 @@
 /etc/pacman.conf
 /home/userpc/.vim/init.vim
 /home/userpc/.Xresources
+/home/userpc/.tmux.conf
