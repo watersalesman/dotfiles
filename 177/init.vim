@@ -79,7 +79,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 
-"Latex
+"LaTeX
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf'
 
@@ -108,4 +108,3 @@ set number
 set nowrap
 let g:netrw_liststyle = 3
 set pastetoggle=<F10>
-

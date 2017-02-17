@@ -33,4 +33,34 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="smb://10.1.10.78/home/rramos04" added="2017-02-15T14:13:03Z" modified="2017-02-15T14:13:03Z" visited="2017-02-15T14:13:03Z">
+    <title>rramos04</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2017-02-15T14:13:03Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://10.2.8.23/home$/rramos" added="2017-02-15T14:44:30Z" modified="2017-02-15T14:44:30Z" visited="2017-02-15T14:44:30Z">
+    <title>rramos</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2017-02-15T14:44:30Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://10.2.8.23/dept$/" added="2017-02-15T15:03:05Z" modified="2017-02-15T15:06:28Z" visited="2017-02-15T15:06:28Z">
+    <title>dept$ on 10.2.8.23</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2017-02-15T15:06:28Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>
