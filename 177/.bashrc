@@ -19,6 +19,7 @@ alias la="ls -a"
 alias vi="nvim"
 alias vim="nvim"
 alias v="nvim"
+alias sv="sudo nvim"
 alias urxvt='urxvt -e tmux'
 
 #Default thingy
