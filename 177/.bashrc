@@ -26,8 +26,7 @@ alias urxvt='urxvt -e tmux'
 PS1='\e[0;34m[\u|\h]\e[m(\W) \$ '
 
 #Variables
-EDITOR="nvim"
-VISUAL="nvim"
-
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 set -o emacs

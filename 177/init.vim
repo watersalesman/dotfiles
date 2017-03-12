@@ -80,6 +80,7 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 
 "LaTeX
+let g:Tex_GotoError=0
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf'
 
@@ -108,3 +109,9 @@ set number
 set nowrap
 let g:netrw_liststyle = 3
 set pastetoggle=<F10>
+
+"Custom Keybindings
+map <C-H> <C-W>h
+map <C-J> <C-w>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
