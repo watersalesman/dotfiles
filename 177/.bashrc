@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 #Merge .Xresources
-xrdb ~/.Xdefaults
+#xrdb ~/.Xdefaults
 
 #Aliases
 alias ls='ls --color=auto'

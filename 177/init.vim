@@ -17,6 +17,8 @@ Plugin 'git://github.com/tpope/vim-fugitive.git'
 Plugin 'git://github.com/ctrlpvim/ctrlp.vim.git'
 Plugin 'git://github.com/vim-latex/vim-latex.git'
 Plugin 'git://github.com/Shougo/deoplete.nvim.git'
+Plugin 'git://github.com/zchee/deoplete-jedi.git'
+Plugin 'git://github.com/zchee/deoplete-clang.git'
 Plugin 'git://github.com/neomake/neomake.git'
 Plugin 'git://github.com/raimondi/delimitmate.git'
 
