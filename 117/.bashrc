@@ -14,6 +14,7 @@ alias l="ls"
 alias vi="nvim"
 alias vim="nvim"
 alias v="nvim"
+alias sv="sudo nvim"
 
 #Default thingy
 PS1='[\u@\h \W]\$ '
