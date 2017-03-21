@@ -21,7 +21,9 @@ Plugin 'git://github.com/zchee/deoplete-jedi.git'
 Plugin 'git://github.com/zchee/deoplete-clang.git'
 Plugin 'git://github.com/neomake/neomake.git'
 Plugin 'git://github.com/raimondi/delimitmate.git'
+Plugin 'git://github.com/scrooloose/nerdtree.git'
 
+Plugin 'https://github.com/rhysd/vim-color-spring-night'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -75,6 +77,14 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 "Tagbar
 nmap <F8> :TagbarToggle<CR>
 
+"NERDTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
 "CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -89,10 +99,10 @@ let g:Tex_MultipleCompileFormats = 'pdf'
 "let g:Tex_CompileRule_pdf = 'pdflatex --shell-escape --interaction=nonstopmode $*'
 
 "   To create the following files
-"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
-"let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
-"let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
-"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
+let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
+let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 
 "Deoplete
 let g:deoplete#enable_at_startup = 1
@@ -104,7 +114,7 @@ let g:neomake_python_enabled_makers = ['pylint','python']
 "General config
 :syntax on
 :set mouse=
-:colorscheme elflord
+colorscheme spring-night
 :set tabstop=4
 :set shiftwidth=4
 set number
