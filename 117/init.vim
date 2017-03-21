@@ -121,6 +121,7 @@ set number
 set nowrap
 let g:netrw_liststyle = 3
 set pastetoggle=<F10>
+set clipboard+=unnamedplus
 
 "Custom Keybindings
 map <C-H> <C-W>h
