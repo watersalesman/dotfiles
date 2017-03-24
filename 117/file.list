@@ -1,4 +1,5 @@
 /home/userpc/.bashrc
+/home/userpc/.zshrc
 /home/userpc/.config/gtk-3.0
 /home/userpc/.gtkrc-2.0
 /home/userpc/.config/i3
@@ -7,4 +8,4 @@
 /home/userpc/.vim/init.vim
 /home/userpc/.Xdefaults
 /home/userpc/.tmux.conf
-/home/userpc/.config/termite/config
+/home/userpc/.config/termite

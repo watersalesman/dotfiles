@@ -20,7 +20,6 @@ alias vi="nvim"
 alias vim="nvim"
 alias v="nvim"
 alias sv="sudo nvim"
-alias urxvt='urxvt -e tmux'
 
 #Default thingy
 PS1='\e[0;34m[\u|\h]\e[m(\W) \$ '
