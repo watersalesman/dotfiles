@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="smb://riap.local/" added="2017-02-02T22:09:05Z" modified="2017-02-02T22:12:13Z" visited="2017-02-02T22:12:13Z">
+    <title>Windows shares on riap.local</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2017-02-02T22:12:13Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://10.2.8.14/" added="2017-02-02T22:15:45Z" modified="2017-02-09T01:21:00Z" visited="2017-02-09T01:21:00Z">
+    <title>Windows shares on 10.2.8.14</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2017-02-09T01:21:00Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://summit11/" added="2017-02-08T15:38:42Z" modified="2017-02-08T15:38:42Z" visited="2017-02-08T15:38:42Z">
+    <title>Windows shares on summit11</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2017-02-08T15:38:42Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://10.1.10.78/home/rramos04" added="2017-02-15T14:13:03Z" modified="2017-02-15T14:13:03Z" visited="2017-02-15T14:13:03Z">
+    <title>rramos04</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2017-02-15T14:13:03Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://10.2.8.23/home$/rramos" added="2017-02-15T14:44:30Z" modified="2017-02-15T14:44:30Z" visited="2017-02-15T14:44:30Z">
+    <title>rramos</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2017-02-15T14:44:30Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://10.2.8.23/dept$/" added="2017-02-15T15:03:05Z" modified="2017-02-15T15:06:28Z" visited="2017-02-15T15:06:28Z">
+    <title>dept$ on 10.2.8.23</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2017-02-15T15:06:28Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

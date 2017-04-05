@@ -96,13 +96,15 @@ let g:Tex_GotoError = 0
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf'
 
-"let g:Tex_CompileRule_pdf = 'pdflatex --shell-escape --interaction=nonstopmode $*'
+let g:Tex_CompileRule_pdf = 'pdflatex --shell-escape --interaction=nonstopmode $*'
 
+let g:Imap_UsePlaceHolders = 0
+let g:Tex_SmartKeyDot = 0
 "   To create the following files
-let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
-let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
-let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
-let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+"let g:Tex_CompileRule_dvi = 'latex --interaction=nonstopmode $*'
+"let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
+"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 
 "Deoplete
 let g:deoplete#enable_at_startup = 1
