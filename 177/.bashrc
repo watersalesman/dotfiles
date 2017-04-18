@@ -17,7 +17,6 @@ alias l="ls"
 alias ll="ls -l"
 alias la="ls -a"
 alias vi="nvim"
-alias vim="nvim"
 alias v="nvim"
 alias sv="sudo nvim"
 

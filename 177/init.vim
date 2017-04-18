@@ -99,6 +99,7 @@ let g:Tex_MultipleCompileFormats = 'pdf'
 let g:Tex_CompileRule_pdf = 'pdflatex --shell-escape --interaction=nonstopmode $*'
 
 let g:Imap_UsePlaceHolders = 0
+let g:Tex_SmartKeyQuote = 0
 let g:Tex_SmartKeyDot = 0
 "   To create the following files
 "let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
@@ -114,11 +115,11 @@ autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_python_enabled_makers = ['pylint','python']
 
 "General config
-:syntax on
-:set mouse=
+syntax on
+set mouse=
 colorscheme spring-night
-:set tabstop=4
-:set shiftwidth=4
+set tabstop=4
+set shiftwidth=4
 set number
 set nowrap
 let g:netrw_liststyle = 3
@@ -126,7 +127,9 @@ set pastetoggle=<F10>
 set clipboard+=unnamedplus
 
 "Custom Keybindings
-map <C-H> <C-W>h
-map <C-J> <C-w>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
+nmap <silent> <C-h> :wincmd h<CR>
+autocmd VimEnter * nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+map - <C-W>-
+map + <C-W>+

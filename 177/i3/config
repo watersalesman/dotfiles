@@ -10,12 +10,12 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $lock i3lock -e -i Pictures/pixelforest.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c
-set $lockdpms xset dpms 5 5 5 && i3lock -en -i Pictures/pixelforest.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c && xset dpms 0 0 0
+set $lock i3lock -e -i Pictures/bg.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c
+set $lockdpms xset dpms 5 5 5 && i3lock -en -i Pictures/bg.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c && xset dpms 0 0 0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Terminus 9
+font pango:Noto Sans Bold 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -53,7 +53,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
-bindsym XF86MonBrightnessUp xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 
 # Touchpad toggle
 #bindsym XF86TouchpadOff
@@ -62,7 +62,7 @@ bindsym XF86MonBrightnessUp xbacklight -inc 5 # increase screen brightness
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -196,7 +196,7 @@ bar {
         #urgent_workspace   #aa0000 #990000 #ffffff
     }
     status_command	i3status
-	position		top
+	position		bottom
 }
 
 #Misc configurations
@@ -204,18 +204,21 @@ bar {
 for_window [class="^.*"] border pixel 2
 smart_gaps on
 smart_borders on
-gaps inner 8
+gaps inner 5
 
 #Startup commands
-assign [class="Chromium"] 2
 assign [class="Thunderbird"] 4
-exec --no-startup-id "feh --bg-scale ~/Pictures/snowfield.jpg"
+for_window [title="Google - Chromium"] move workspace number 3
+for_window [title="Arch Linux Forums - Chromium"] move workspace number 5
+exec --no-startup-id "feh --bg-scale ~/Pictures/bg.png"
 exec --no-startup-id "xset s off && xset dpms 0 0 0"
-exec --no-startup-id "xinput set-prop 14 293 1"
+exec --no-startup-id "xinput set-prop 14 303 1"
+exec --no-startup-id "xset r rate 200 65"
 exec --no-startup-id "compton -GCb"
 exec --no-startup-id "redshift"
 exec --no-startup-id nm-applet
-exec --no-startup-id "chromium"
 exec --no-startup-id "thunderbird"
-exec --no-startup-id i3-msg 'workspace 3;exec urxvt;workspace 1'
+exec --no-startup-id i3-msg 'workspace 2;exec termite;workspace 1'
+exec --no-startup-id i3-msg 'workspace 3;exec chromium;workspace 1'
+exec --no-startup-id i3-msg 'workspace 5;exec termite -e weechat; exec chromium --new-window bbs.archlinux.org aur.archlinux.org;workspace 1'
 exec --no-startup-id "megasync"
