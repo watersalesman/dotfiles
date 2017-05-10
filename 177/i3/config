@@ -204,8 +204,7 @@ gaps inner 5
 
 #Startup commands
 assign [class="Thunderbird"] 4
-assign [class="qutebrowser"] 3
-assign [class="Chromium"] 5
+assign [class="Chromium"] 3
 exec --no-startup-id "feh --bg-scale ~/Pictures/bg.png"
 exec --no-startup-id "xset s off && xset dpms 0 0 0"
 exec --no-startup-id "xinput set-prop 14 303 1"
@@ -214,8 +213,7 @@ exec --no-startup-id "compton -GCb"
 exec --no-startup-id "redshift"
 exec --no-startup-id nm-applet
 exec --no-startup-id "thunderbird"
+exec --no-startup-id "chromium"
 exec --no-startup-id i3-msg 'workspace 2;exec termite;workspace 1'
-exec --no-startup-id i3-msg 'workspace 3;exec firejail qutebrowser --backend webengine ;workspace 1'
-exec --no-startup-id i3-msg 'workspace 5;exec termite -e weechat; exec chromium --new-window bbs.archlinux.org aur.archlinux.org;workspace 1'
 exec --no-startup-id "megasync"
-exec --no-startup-id "kdeconnect-indicator"
+exec --no-startup-id "kdeconnectd"

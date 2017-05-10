@@ -1,9 +1,7 @@
 /home/userpc/.bashrc
 /home/userpc/.config/gtk-3.0
-/home/userpc/.gtkrc-2.0
 /home/userpc/.config/i3
 /home/userpc/.config/i3status
-/etc/pacman.conf
 /home/userpc/.vim/init.vim
 /home/userpc/.Xdefaults
 /home/userpc/.tmux.conf

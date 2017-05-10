@@ -4,7 +4,7 @@ clickable_url = true
 scroll_on_output = false
 mouse_autohide = true
 scrollback_lines = 1000
-font = DejaVu Sans Mono for Powerline 12
+font = DejaVu Sans Mono 12
 
 [colors]
 background = rgba(20,20,43,0.85)

@@ -4,13 +4,12 @@ HISTSIZE=10000
 SAVEHIST=1000
 setopt appendhistory autocd extendedglob
 bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
 zstyle :compinstall filename '/home/userpc/.zshrc'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+#Path
+fpath=(~/.zsh/completion $fpath)
+
+autoload -Uz compinit && compinit -i
 
 
 #History Searching
@@ -24,6 +23,9 @@ zstyle ':completion:*' rehash true
 #Keybindings
 bindkey "\e[3~" delete-char
 
+#Keyboard repeat rate
+xset r rate 200 65
+
 #Prompt
 autoload -U colors && colors
 PS1="%{$fg[red]%}[%{$fg[cyan]%}%n%{$fg[red]%}|%{$fg[cyan]%}%m%{$fg[red]%}] %{$fg[white]%}%1~% %{$fg[red]%} %(#.#.>>)%{$reset_color%} "
@@ -36,9 +38,11 @@ alias c="cd"
 alias l="ls"
 alias ll="ls -l"
 alias la="ls -a"
+alias vim='nvim'
 alias vi="nvim"
 alias v="nvim"
 alias sv="sudo nvim"
+alias docker='sudo docker'
 
 #Variables
 export EDITOR="nvim"
