@@ -25,6 +25,8 @@ Plugin 'https://github.com/tweekmonster/deoplete-clang2.git'
 Plugin 'https://github.com/neomake/neomake.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/mattn/emmet-vim.git'
+Plugin 'sebastianmarkow/deoplete-rust'
+
 
 
 Plugin 'https://github.com/rhysd/vim-color-spring-night'
@@ -114,6 +116,10 @@ let g:Tex_SmartKeyDot = 0
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#python_path = '/usr/bin/python3'
 autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+
+"Deoplete-Rust
+let g:deoplete#sources#rust#racer_binary='/home/userpc/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/home/userpc/.vim/bundle/deoplete-rust/rust/src'
 
 "Neomake
 autocmd! BufWritePost,BufEnter * Neomake
