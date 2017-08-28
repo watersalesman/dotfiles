@@ -50,7 +50,7 @@ alias dnfi='s dnf install'
 alias dnfs='dnf search'
 alias dnfr='s dnf remove'
 alias dnfu='s dnf upgrade'
-alias iipdate='scp -r ~/mega/2017-2018_Fall/iip/public_html/ math:~/'
+alias iipdate='rsync -r --delete --progress ~/mega/2017-2018_Fall/iip/public_html/ math:~/public_html'
 
 #Variables
 export EDITOR="nvim"

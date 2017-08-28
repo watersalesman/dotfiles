@@ -148,6 +148,7 @@ map + <C-W>+
 map  <F5> :w<CR>:term gcc -o run_c % && ./run_c<CR>
 
 "Custom Commands
-command PyRun term python -i %
-command CRun term gcc -o /tmp/run_c % && /tmp/run_c && rm /tmp/run_c
-command CargoRun term cargo run
+command PyRun tabnew | term python -i %
+command CRun tabnew | term gcc -o /tmp/run_c % && /tmp/run_c && rm /tmp/run_c
+command CargoRun tabnew | term cargo run
+command Iipdate tabnew | term rsync -r --delete --progress ~/mega/2017-2018_Fall/iip/public_html/ math:~/public_html
