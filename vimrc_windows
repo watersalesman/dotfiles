@@ -1,0 +1,107 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+"set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" " let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'https://github.com/thinca/vim-quickrun.git/'
+Plugin 'https://github.com/vim-airline/vim-airline'
+Plugin 'https://github.com/vim-airline/vim-airline-themes'
+Plugin 'https://github.com/bronson/vim-trailing-whitespace'
+Plugin 'https://github.com/tpope/vim-surround.git'
+Plugin 'https://github.com/majutsushi/tagbar.git'
+Plugin 'https://github.com/tpope/vim-fugitive.git'
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plugin 'https://github.com/pangloss/vim-javascript.git'
+Plugin 'https://github.com/rust-lang/rust.vim'
+Plugin 'https://github.com/scrooloose/nerdtree.git'
+Plugin 'https://github.com/mattn/emmet-vim.git'
+
+
+" " All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"Airline
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+let g:airline_powerline_fonts = 1
+set laststatus=2
+let g:airline_section_a = '%{strftime("%c")}'
+let g:airline_section_d = '%{fugitive#statusline()}'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"Tagbar
+nmap <F8> :TagbarToggle<CR>
+
+"NERDTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+autocmd StdinReadPre * let s:std_in = 1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+"CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_show_hidden = 1
+
+"Vim-JavaScript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+
+"General config
+syntax on
+set mouse=
+set ts=4 sw=4 et
+set number
+set nowrap
+let g:netrw_liststyle = 3
+set pastetoggle=<F10>
+set clipboard=unnamed
+
+"Custom Keybindings
+nmap <silent> <C-h> :wincmd h<CR>
+autocmd VimEnter * nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+map - <C-W>-
+map + <C-W>+
+map  <F5> :w<CR>:term gcc -o run_c % && ./run_c<CR>
+
+"Custom Commands
+command PyRun tabnew | term python -i %
+command CRun tabnew | term gcc -o /tmp/run_c % && /tmp/run_c && rm /tmp/run_c
+command CargoRun tabnew | term cargo run
