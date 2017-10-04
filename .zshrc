@@ -43,7 +43,6 @@ alias vim='nvim'
 alias vi="nvim"
 alias v="nvim"
 alias sv="sudo nvim"
-alias e='emacsclient'
 alias docker='sudo docker'
 alias py='python3'
 alias dnfi='s dnf install'
