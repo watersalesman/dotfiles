@@ -9,9 +9,8 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
-set $lock i3lock -e -i Pictures/bg.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c
-set $lockdpms xset dpms 5 5 5 && i3lock -en -i Pictures/bg.png --textcolor=ffffff00 --insidecolor=ffffff1c --ringcolor=ffffff3e --linecolor=ffffff00 --keyhlcolor=00000080 --ringvercolor=00000000 --separatorcolor=22222260 --insidevercolor=0000001c --ringwrongcolor=00000055 --insidewrongcolor=0000001c && xset dpms 0 0 0
+set $mod Mod1
+set $lock swaylock
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -29,13 +28,13 @@ font pango:Noto Sans Bold 9
 # font, it doesn’t scale on retina/hidpi displays.
 
 #Lock Screen
-bindsym ctrl+mod1+l exec $lockdpms
+bindsym mod4+l exec $lock
 
 #Set shutdown mode
 set $mode_system (l) Lock, (e) Logout, (r) Reboot, (s) Shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $lockdpms, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym e exec --no-startup-id swaymsg exit, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym s exec --no-startup-id systemctl poweroff, mode "default"
 
@@ -44,7 +43,7 @@ bindsym Return mode "default"
 bindsym Escape mode "default"
 }
 bindsym XF86PowerOff mode "$mode_system"
-bindsym XF86Sleep exec $lock && systemctl suspend
+bindsym XF86Sleep systemctl suspend #&& exec $lock
 
 #Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -67,8 +66,7 @@ bindsym $mod+Return exec termite
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start j4-dmenu-desktop (a faster program launcher)
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
+bindsym $mod+d exec --no-startup-id dmenu_run
 
 # change focus
 bindsym $mod+h focus left
@@ -149,7 +147,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'swaymsg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -199,21 +197,13 @@ bar {
 #hide_edge_borders both
 for_window [class="^.*"] border pixel 4
 smart_gaps on
-smart_borders on
 gaps inner 5
 
 #Startup commands
-assign [class="Thunderbird"] 4
-assign [class="Chromium"] 3
-exec --no-startup-id "feh --bg-scale ~/Pictures/bg.png"
-exec --no-startup-id "xset s off && xset dpms 0 0 0"
-exec --no-startup-id "xinput set-prop 14 303 1"
-exec --no-startup-id "xset r rate 200 65"
-exec --no-startup-id "compton -GCb"
-exec --no-startup-id "redshift"
+assign [class="Evolution"] 4
+assign [class="Nightly"] 3
 exec --no-startup-id nm-applet
-exec --no-startup-id "thunderbird"
-exec --no-startup-id "chromium"
-exec --no-startup-id i3-msg 'workspace 2;exec termite;workspace 1'
+exec --no-startup-id swaymsg 'workspace 2;exec termite;workspace 1'
+exec --no-startup-id swaymsg 'workspace 4;exec evolution;workspace 1'
+exec --no-startup-id "firefox-nightly"
 exec --no-startup-id "megasync"
-exec --no-startup-id "kdeconnectd"

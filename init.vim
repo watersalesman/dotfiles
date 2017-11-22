@@ -148,9 +148,9 @@ map + <C-W>+
 map  <F5> :w<CR>:term gcc -o run_c % && ./run_c<CR>
 
 "Custom Commands
-command PyRun tabnew | term python -i %
+command PyRun tabnew | term python3 -i %
 command CRun tabnew | term gcc -o /tmp/run_c % && /tmp/run_c && rm /tmp/run_c
 command CppRun tabnew | term g++ -o /tmp/run_cpp % && /tmp/run_cpp && rm /tmp/run_cpp
 command CargoRun tabnew | term cargo run
-command Iipdate tabnew | term rsync -r --delete --progress ~/mega/2017-2018_Fall/iip/public_html/ math:~/public_html
+command Iipdate !rsync -r --delete --progress ~/mega/2017-2018_Fall/iip/public_html/ math:~/public_html
 command Term tabnew | term
