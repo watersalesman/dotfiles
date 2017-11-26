@@ -26,8 +26,8 @@ Plugin 'https://github.com/neomake/neomake.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/mattn/emmet-vim.git'
 Plugin 'sebastianmarkow/deoplete-rust'
-
-
+Plugin 'xolox/vim-misc' "vim-notes dependency
+Plugin 'xolox/vim-notes'
 
 Plugin 'https://github.com/rhysd/vim-color-spring-night'
 
@@ -126,6 +126,9 @@ autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_python_python_exe = '/usr/bin/python3'
 let g:neomake_python_pylint_exe = '/usr/bin/pylint-3'
 let g:neomake_python_enabled_makers = ['pylint', 'python']
+
+"Vim Notes
+let g:notes_directories = ['~/mega/other/notes']
 
 "General config
 syntax on
