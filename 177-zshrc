@@ -49,7 +49,7 @@ alias dnfi='s dnf install'
 alias dnfs='dnf search'
 alias dnfr='s dnf remove'
 alias dnfu='s dnf upgrade'
-alias iipdate='rsync -r --delete --progress ~/mega/2017-2018_Fall/iip/public_html/ math:~/public_html'
+alias csupdate='rsync -r --delete --progress ~/mega/2017-2018_Spring/client_side/public_html/ math:~/public_html'
 alias docker_aur='docker run --rm -v /home/userpc/build:/home/aur/build -it oblique/archlinux-pacaur bash -c "su aur"'
 
 #Variables

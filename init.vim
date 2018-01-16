@@ -156,4 +156,5 @@ command CRun tabnew | term gcc -o /tmp/run_c % && /tmp/run_c && rm /tmp/run_c
 command CppRun tabnew | term g++ -o /tmp/run_cpp % && /tmp/run_cpp && rm /tmp/run_cpp
 command CargoRun tabnew | term cargo run
 command Iipdate !rsync -r --delete --progress ~/mega/2017-2018_Fall/iip/public_html/ math:~/public_html
+command Csupdate !rsync -r --delete --progress ~/mega/2017-2018_Spring/client_side/public_html/ math:~/public_html
 command Term tabnew | term
