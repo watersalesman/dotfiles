@@ -7,10 +7,9 @@ bindkey -e
 zstyle :compinstall filename '/home/userpc/.zshrc'
 
 #Path
+export PATH="$PATH:/home/userpc/.local/bin"
 fpath=(~/.zsh/completion $fpath)
-
 autoload -Uz compinit && compinit -i
-
 
 #History Searching
 bindkey '\e[A' history-beginning-search-backward
